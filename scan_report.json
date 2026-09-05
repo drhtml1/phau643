@@ -1,0 +1,62 @@
+{
+    "target_ip": "192.168.11.117",
+    "total_threats": 2,
+    "port_matrix": [
+        {
+            "port": 80,
+            "service": "HTTP Web Server",
+            "status": "CLOSED (SECURE)",
+            "is_open": false
+        },
+        {
+            "port": 22,
+            "service": "SSH Remote Access",
+            "status": "CLOSED (SECURE)",
+            "is_open": false
+        },
+        {
+            "port": 21,
+            "service": "FTP File Transfer",
+            "status": "CLOSED (SECURE)",
+            "is_open": false
+        },
+        {
+            "port": 445,
+            "service": "SMB File Sharing / Ransomware Target",
+            "status": "OPEN (UNSECURED)",
+            "is_open": true
+        },
+        {
+            "port": 3389,
+            "service": "RDP Remote Desktop",
+            "status": "CLOSED (SECURE)",
+            "is_open": false
+        },
+        {
+            "port": 8080,
+            "service": "IoT Web Management Interface",
+            "status": "CLOSED (SECURE)",
+            "is_open": false
+        },
+        {
+            "port": 135,
+            "service": "RPC Endpoint Mapper",
+            "status": "OPEN (UNSECURED)",
+            "is_open": true
+        }
+    ],
+    "threat_details": [
+        {
+            "category": "NETWORK PORT EXPOSURE",
+            "severity": "CRITICAL",
+            "target": "192.168.11.117:445 (SMB File Sharing / Ransomware Target)",
+            "detail": "المنفذ 445 مفتوح بدون تشفير إضافي، مما يجعل أجهزة الـ IoT عرضة للاختراق المباشر."
+        },
+        {
+            "category": "NETWORK PORT EXPOSURE",
+            "severity": "CRITICAL",
+            "target": "192.168.11.117:135 (RPC Endpoint Mapper)",
+            "detail": "المنفذ 135 مفتوح بدون تشفير إضافي، مما يجعل أجهزة الـ IoT عرضة للاختراق المباشر."
+        }
+    ]
+}
